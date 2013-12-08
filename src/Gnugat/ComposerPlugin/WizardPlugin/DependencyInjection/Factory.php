@@ -51,11 +51,7 @@ class Factory
      */
     public static function makeKernelManipulator()
     {
-        $backToProjectRoot = '/../../../../../../..';
-        if (!file_exists(__DIR__.$backToProjectRoot.'/app/AppKernel.php')) {
-            $backToProjectRoot = '/../../symfony-app';
-        }
-        require_once __DIR__.$backToProjectRoot.'/app/AppKernel.php';
+        require_once 'app/AppKernel.php';
 
         $kernel = new \AppKernel('dev', true);
 
