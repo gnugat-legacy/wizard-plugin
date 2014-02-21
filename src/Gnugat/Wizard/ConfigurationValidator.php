@@ -41,6 +41,8 @@ class ConfigurationValidator
 
     public function validate($projectPath, $configFileName, $environment)
     {
+        require sprintf('%s/vendor/autoload.php', $projectPath);
+
         $configFile = sprintf('%s/app/config/%s', $projectPath, $configFileName);
 
         $this->kernel = $this->createKernel($projectPath, array('environment' => $environment));

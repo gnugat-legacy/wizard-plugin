@@ -2,7 +2,6 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../../project-test/vendor/autoload.php';
 
 use Gnugat\Wizard\Wizard;
 

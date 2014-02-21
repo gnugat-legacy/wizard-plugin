@@ -65,7 +65,7 @@ class ValidateConfigurationCommand extends Command
     {
         $configurationValidator = new ConfigurationValidator();
 
-        $projectPath = $input->getArgument('project-path');
+        $projectPath = getcwd() . '/' . $input->getArgument('project-path');
 
         $configFileName = 'config_prod.yml';
         $environment = 'prod';
