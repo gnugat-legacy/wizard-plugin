@@ -61,8 +61,6 @@ class ConfigurationValidator
 
         unset($configs['imports']);
 
-        // print_r($configs);
-
         $missings = array();
 
         $processor = new Processor();
@@ -78,8 +76,6 @@ class ConfigurationValidator
             if (class_exists($class) && !method_exists($class, '__construct') && array_key_exists($extension->getAlias(), $configs)) {
                 $configuration = new $class;
 
-                // echo $extension->getAlias();
-                // echo "\n";
                 try {
                     $processedConfiguration = $processor->processConfiguration($configuration, array($extension->getAlias() => $configs[$extension->getAlias()]));
                 } catch (\Symfony\Component\Config\Definition\Exception\InvalidConfigurationException $e) {
@@ -87,11 +83,13 @@ class ConfigurationValidator
                     preg_match('/The child node "([a-z]*)"/', $e->getMessage(), $matches);
 
                     $missings[$extension->getAlias()][$e->getPath()][] = $matches[1];
+
+                    return $e->getPath() . '.' . $matches[1];
                 }
             }
         }
 
-        return $missings;
+        return true;
     }
 
     public function getDefaultConfiguration(Extension $extension)
