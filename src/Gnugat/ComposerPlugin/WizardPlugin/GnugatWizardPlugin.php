@@ -55,13 +55,17 @@ class GnugatWizardPlugin implements PluginInterface, EventSubscriberInterface
      */
     public function registerPackage(Event $event)
     {
+        $output = $event->getIo();
         $installedPackage = $event->getOperation()->getPackage();
 
         if (!$this->supports($installedPackage)) {
             return;
         }
-
-        $this->enablePackage($installedPackage);
+        try {
+            $this->enablePackage($installedPackage);
+        } catch (\RuntimeException $e) {
+            $output->write(sprintf('Bundle "%s" is already registered', $installedPackage));
+        }
     }
 
     /**
