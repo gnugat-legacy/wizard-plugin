@@ -6,10 +6,11 @@ Once installed, it will:
 
 1. listen to Composer's `require` command
 2. check if the installed package is a [Symfony2](http://symfony.com/) bundle
-3. if so, register it in the application's kernel
+3. if so:
+    * convert the package name into a fully qualified classname (FCQN)
+    * register the FCQN in the application's kernel
 
-It uses [GnugatWizardBundle](https://github.com/gnugat/GnugatWizardBundle) for
-the bundle registration.
+It heavily relies on [GnugatWizardBundle](https://github.com/gnugat/GnugatWizardBundle).
 
 ## What's the point?
 

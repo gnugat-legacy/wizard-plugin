@@ -1,28 +1,26 @@
 {
     "name": "gnugat/wizard-plugin",
     "type": "composer-plugin",
-    "description": "Launches GnugatWizardBundle after package installation",
-    "keywords": ["wizard", "install", "remove", "bundle", "command", "symfony"],
+    "description": "Automatically registers bundles in a Symfony2 application when running 'composer require'",
+    "keywords": ["wizard", "install", "bundle", "symfony"],
     "homepage": "https://github.com/gnugat/wizard-plugin",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Loïc Chardonnet"
-        }
-    ],
+    "authors": [{
+        "name": "Loïc Chardonnet",
+        "email": "loic.chardonnet@gmail.com",
+        "homepage": "http://gnugat.github.io",
+        "role": "Developer"
+    }],
     "require": {
         "composer-plugin-api": "1.0.0",
-
         "gnugat/wizard-bundle": "~1"
     },
     "require-dev": {
         "composer/composer": "~1.0@alpha"
     },
-    "autoload": {
-        "psr-0": {
-            "": "src"
-        }
-    },
+    "autoload": {"psr-4": {
+        "": "src"
+    }},
     "extra": {
         "class": "Gnugat\\ComposerPlugin\\WizardPlugin\\GnugatWizardPlugin"
     }

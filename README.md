@@ -1,29 +1,25 @@
-# [Composer](http://getcomposer.org/) plugin for Gnugat's Wizard
+# [Composer](http://getcomposer.org/) plugin for Gnugat Wizard Bundle
 
-In the Wizard family,
-[the big brother (the bundle)](https://github.com/gnugat/GnugatWizardBundle)
-provides a command to register a [Symfony2](http://symfony.com/) bundle into
-the application's kernel.
+Removes [muggle](http://en.wikipedia.org/wiki/Muggle) steps from bundle
+installation by shrinking it to a single command:
 
-This project, the little sister, is a Composer plugin which launches this
-command after each:
+    composer require 'acme/demo-bunlde:*'
 
-    php composer.phar require '<package>'
+No more manual edition of `app/AppKernel.php`, everything is done automagically!
 
-If you want to learn more about the big brother, read
+Read more about this project with the following
+[introduction](Resources/doc/01-introduction.md#introduction).
+If you want to learn more about GnugatWizardBunlde, you can read
 [its own introduction](https://github.com/gnugat/GnugatWizardBundle/blob/master/Resources/doc/01-introduction.md#introduction).
-If you'd rather learn more about the little sister, read
-[this introduction](doc/01-introduction.md).
+
+![GnugatWizardBundle logo](Resources/img/logo.jpg)
 
 ## Installation
 
-To download and install this plugin into your Symfony2 application, run the
-following command:
+Install this plugin in your [Symfony2](http://symfony.com/) application using
+[Composer](http://getcomposer.org/):
 
-    curl -sS  https://raw.github.com/gnugat/wizard-plugin/master/bin/installer.sh | sh
-
-Details about installation steps can be found in the
-[documentation](doc/02-installation.md).
+    composer require 'gnugat/wizard-plugin:~1'
 
 ## Further documentation
 
@@ -39,11 +35,3 @@ You can find more documentation at the following links:
 * [versioning and branching models](VERSIONING.md)
 * [contribution instructions](CONTRIBUTING.md)
 * [documentation directory](doc)
-
-This plugin began as a hackday at [SensioLabs](http://sensiolabs.com/), with
-the help of:
-
-* [Loïc Chardonnet](https://github.com/gnugat) (lead developer)
-* [Frank Stelzer](https://github.com/frastel)
-* and other
-  [awesome developers](https://github.com/gnugat/wizard-plugin/graphs/contributors)
