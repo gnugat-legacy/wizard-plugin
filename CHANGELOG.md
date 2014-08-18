@@ -2,6 +2,10 @@
 
 This file logs the changes between versions.
 
+## 1.0.2: Improved documentation
+
+* improved documentation
+
 ## 1.0.1: Catching Exception
 
 * caught the exception when a bundle is already registered
