@@ -2,6 +2,10 @@
 
 This file logs the changes between versions.
 
+## 1.0.3: Fixed PSR4
+
+* Added a prefix for the autoloader configuration
+
 ## 1.0.2: Improved documentation
 
 * improved documentation
