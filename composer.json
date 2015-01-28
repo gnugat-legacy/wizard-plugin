@@ -12,16 +12,21 @@
         "role": "Developer"
     }],
     "require": {
-        "composer-plugin-api": "1.0.0",
-        "gnugat/wizard-bundle": "~1"
+        "composer-plugin-api": "1.0.0"
     },
     "require-dev": {
-        "composer/composer": "~1.0@alpha"
+        "ciaranmcnulty/phpspec-typehintedmethods": "~1.1",
+        "composer/composer": "~1.0@alpha",
+        "phpspec/phpspec": "~2.1",
+        "phpunit/phpunit": "~4.4"
     },
-    "autoload": {"psr-4": {
-        "Gnugat\\ComposerPlugin\\WizardPlugin\\": "src/Gnugat/ComposerPlugin/WizardPlugin"
-    }},
+    "autoload": {
+        "psr-4": { "Gnugat\\WizardPlugin\\": "src/Gnugat/WizardPlugin" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Gnugat\\WizardPlugin\\Tests\\": "tests" }
+    },
     "extra": {
-        "class": "Gnugat\\ComposerPlugin\\WizardPlugin\\GnugatWizardPlugin"
+        "class": "Gnugat\\WizardPlugin\\GnugatWizardPlugin"
     }
 }
