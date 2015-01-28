@@ -12,7 +12,8 @@
         "role": "Developer"
     }],
     "require": {
-        "composer-plugin-api": "1.0.0"
+        "composer-plugin-api": "1.0.0",
+        "gnugat/redaktilo": "~1.7"
     },
     "require-dev": {
         "ciaranmcnulty/phpspec-typehintedmethods": "~1.1",
