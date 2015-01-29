@@ -1,3 +1,6 @@
 # Dependencies
 /vendor/*
 /composer.lock
+
+# Tmp
+/tests/sandbox/*
